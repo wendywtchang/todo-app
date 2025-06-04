@@ -1,42 +1,72 @@
-## 🚀 Project Summary
+# 🧩 Todo App – Full Stack with Docker
 
-This is a simple full-stack Todo App built using **React (Vite)** for the frontend and **Flask** for the backend. Both services are containerized using **Docker** and orchestrated with **docker-compose**.
-
-### ✅ Week 1 Goals Completed:
-- Created a Flask API that serves hardcoded todos (Chinese: 買牛奶, 寫Docker作業)
-- Built a React UI that fetches and displays todos from the backend
-- Wrote Dockerfiles for both frontend and backend
-- Configured `vite.config.js` to proxy API requests to the backend service
-- Solved `ECONNREFUSED` and `Unexpected token '<'` errors by correctly using service name `backend` instead of `localhost`
-- Successfully rendered todo items via `docker-compose` setup
-- Ready to extend app with database and OpenAI features in future weeks
-
-> This project is part of a weekly DevOps learning plan focused on containerization and cloud deployment.
+A simple full-stack **Todo application** using **React (Vite)** as frontend and **Flask** as backend, containerized with **Docker** and orchestrated with **docker-compose**.
 
 ---
 
-# Todo App (React + Flask + Docker)
-一個簡單的待辦清單，練習前後端整合與 Docker 環境建置。
+## ✅ Project Description
 
-## 技術棧
-- React + Vite
-- Flask + Python
-- Docker + docker-compose
+This is part of a weekly DevOps learning journey where I integrate frontend, backend, containerization, and cloud deployment. The project will later be extended with a database and OpenAI-powered features.
 
-## 如何啟動
+---
+
+## 🧰 Tech Stack
+
+- **Frontend**: React (Vite)
+- **Backend**: Flask (Python)
+- **Containerization**: Docker, docker-compose
+- **API Proxy**: Vite proxy setup
+- *(Planned)* PostgreSQL, OpenAI API, GitHub Actions, AWS EC2/S3
+
+---
+
+## 🚀 How to Run
+
 ```bash
-git clone ...
 docker-compose up --build
 ```
 
-## debug
-```bash
-✅ 你今天學會的重要觀念：
-Docker container 間不要用 localhost 溝通 → 要用 docker-compose 中的服務名稱（如 backend）
-Vite proxy 是開發時 API 轉接的關鍵 → 沒設會導致抓不到後端資料
-500 錯誤可能是後端炸了，也可能是前端 proxy 錯誤導致沒打到後端
-Console log 是你 debug 最好的朋友 → React 與 Network tab 可以看到 fetch 狀況
-用 docker-compose up --build 每次建構，確保改動生效
-```
+Then open your browser:
+Frontend: http://localhost:5173
+Backend API: http://localhost:5000/api/todos
 
+---
 
+## 📅 Planned Weekly Progress (Learning Roadmap)
+
+| Week     | Topic                    | Description                                                      |
+| -------- | ------------------------ | ---------------------------------------------------------------- |
+| ✅ Week 1 | Dockerized Todo App      | Build simple Flask + React app with Docker                       |
+| ⬜ Week 2 | Add PostgreSQL DB        | Connect backend to PostgreSQL container using `.env`             |
+| ⬜ Week 3 | Deploy to AWS + CI/CD    | EC2 for backend, S3 for frontend, GitHub Actions for auto-deploy |
+| ⬜ Week 4 | Add OpenAI API           | Use OpenAI to categorize or extend todos                         |
+| ⬜ Week 5 | Add voice input/reminder | Voice-to-text or TTS for task reminder feature                   |
+
+---
+
+## 📂 Project Structure
+todo-app/
+├── backend/         # Flask API
+│   ├── app.py
+│   └── requirements.txt
+├── frontend/        # React (Vite)
+│   ├── src/
+│   ├── public/
+│   └── ...
+├── docker-compose.yml
+├── .gitignore
+└── README.md
+
+---
+
+## 🧠 What I Learned So Far
+1. Docker container basics (Dockerfile, docker-compose)
+2. React ↔ Flask API communication
+3. Debugging Docker network issues
+4. Using Vite proxy for local development
+5. Structured self-learning with real-world deployment in mind
+
+---
+
+## 🔗 Future Plans
+Once this project is fully built and deployed, it will serve as a portfolio-ready example of a real-world full-stack, dockerized, and cloud-deployable application integrated with AI.
