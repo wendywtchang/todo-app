@@ -45,28 +45,39 @@ Backend API: http://localhost:5000/api/todos
 ---
 
 ## 📂 Project Structure
+
+```bash
 todo-app/
-├── backend/         # Flask API
+├── backend/             # Flask API
 │   ├── app.py
 │   └── requirements.txt
-├── frontend/        # React (Vite)
+├── frontend/            # React (Vite)
 │   ├── src/
 │   ├── public/
 │   └── ...
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
+```
 
 ---
 
-## 🧠 What I Learned So Far
+### 🧠 Week 1: What I Learned So Far
 1. Docker container basics (Dockerfile, docker-compose)
 2. React ↔ Flask API communication
 3. Debugging Docker network issues
 4. Using Vite proxy for local development
 5. Structured self-learning with real-world deployment in mind
 
+### ✅ Week 2 Bonus Features (Advanced CRUD)
+
+- [x] ✏️ Inline edit: update task titles
+- [x] ✅ Mark tasks as done/undone
+- [x] 🔍 Filter todos by All / Done / Undone
+- [x] Visulization, DBeaver GUIS
+
 ---
+
 
 ## 🔗 Future Plans
 Once this project is fully built and deployed, it will serve as a portfolio-ready example of a real-world full-stack, dockerized, and cloud-deployable application integrated with AI.
