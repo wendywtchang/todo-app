@@ -69,6 +69,20 @@ def toggle_todo_done(todo_id):
     conn.commit()
     return jsonify({"status": "toggled"})
 
+@app.route("/api/init")
+def init_sample_data():
+    cur.execute("INSERT INTO todos (title, done) VALUES (%s, %s)", ("買牛奶", False))
+    cur.execute("INSERT INTO todos (title, done) VALUES (%s, %s)", ("寫 Docker 作業", False))
+    conn.commit()
+    return jsonify(todos)
+
+@app.route("/api/clear")
+def clear_all():
+    cur.execute("DELETE FROM todos")
+    conn.commit()
+    return jsonify({"status": "cleared"})
+
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
